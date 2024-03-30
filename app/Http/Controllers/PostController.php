@@ -114,8 +114,8 @@ class PostController extends Controller
         //validate form
         $this->validate($request, [
             'image'     => 'image|mimes:jpeg,jpg,png|max:2048',
-            'title'     => 'required|min:5',
-            'content'   => 'required|min:10'
+            'title'     => 'required|min:1',
+            'content'   => 'required|min:1'
         ]);
 
         //get post by ID
