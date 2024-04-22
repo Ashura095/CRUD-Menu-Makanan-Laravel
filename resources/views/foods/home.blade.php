@@ -36,6 +36,12 @@
                                         <p>{!! $food->content !!}</p>
                                     </div>
                                 </div>
+                                <div class="description text-center">                                   
+                                    <div >
+                                          <p style="font-weight: bold">{{ $food->harga }}</p>
+                                    
+                                    </div>
+                                </div>
                             </div>
                         @empty
                             <div class="alert alert-danger">

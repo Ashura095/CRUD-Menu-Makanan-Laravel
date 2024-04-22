@@ -34,6 +34,17 @@
                                     </div>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold">Harga</label>
+                                <input type="text" class="form-control @error('harga') is-invalid @enderror" name="harga" value="{{ old('harga', $food->harga) }}" placeholder="Masukkan harga">
+                            
+                                <!-- error message untuk title -->
+                                @error('title')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
 
                             <div class="form-group">
                                 <label class="font-weight-bold">KONTEN</label>

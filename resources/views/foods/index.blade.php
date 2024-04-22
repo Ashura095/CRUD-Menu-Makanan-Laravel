@@ -25,6 +25,7 @@
                               <tr>
                                 <th scope="col">GAMBAR</th>
                                 <th scope="col">MENU</th>
+                                <th scope="col">HARGA</th>
                                 <th scope="col">DESKRIPSI</th>
                                 <th scope="col">AKSI</th>
                               </tr>
@@ -36,6 +37,7 @@
                                         <img src="{{ asset('/storage/foods/'.$food->image) }}" class="rounded" style="width: 150px">
                                     </td>
                                     <td>{{ $food->title }}</td>
+                                    <td>{{ $food->harga }}</td>
                                     <td>{!! $food->content !!}</td>
                                     <td class="text-center">
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('foods.destroy', $food->id) }}" method="POST">

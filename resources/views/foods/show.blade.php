@@ -17,6 +17,7 @@
                         <img src="{{ asset('storage/foods/'.$food->image) }}" class="w-100 rounded">
                         <hr>
                         <h4>{{ $food->title }}</h4>
+                        <h4>{{ $food->harga }}</h4>
                         <p class="tmt-3">
                             {!! $food->content !!}
                         </p>

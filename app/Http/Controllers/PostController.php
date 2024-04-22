@@ -54,6 +54,7 @@ class PostController extends Controller
         $this->validate($request, [
             'image'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
             'title'     => 'required|min:5',
+            'harga'     => 'required',
             'content'   => 'required|min:10'
         ]);
 
@@ -65,6 +66,7 @@ class PostController extends Controller
         Post::create([
             'image'     => $image->hashName(),
             'title'     => $request->title,
+            'harga'     => $request->harga,
             'content'   => $request->content
         ]);
 
@@ -115,6 +117,7 @@ class PostController extends Controller
         $this->validate($request, [
             'image'     => 'image|mimes:jpeg,jpg,png|max:2048',
             'title'     => 'required|min:1',
+            'harga'     => 'required',
             'content'   => 'required|min:1'
         ]);
 
@@ -135,6 +138,7 @@ class PostController extends Controller
             $food->update([
                 'image'     => $image->hashName(),
                 'title'     => $request->title,
+                'harga'     => $request->harga,
                 'content'   => $request->content
             ]);
 
@@ -143,6 +147,7 @@ class PostController extends Controller
             //update post without image
             $food->update([
                 'title'     => $request->title,
+                'harga'     => $request->harga,
                 'content'   => $request->content
             ]);
         }
