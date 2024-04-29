@@ -14,7 +14,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <h3 class="text-center my-4">MENU MAKANAN</h3>
+                    <a href="/"><h3 class="text-center my-4">MENU MAKANAN</h3></a>
+                    
                     <hr>
                 </div>
                 <div class="card border-0 shadow-sm rounded">
